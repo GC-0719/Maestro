@@ -1,0 +1,8 @@
+#!/bin/bash
+# Mock `claude` CLI: behaves like `claude -p --output-format stream-json`.
+# Consumes stdin, emits stream-json lines, exits 0.
+cat > /dev/null
+echo '{"type":"assistant","message":{"content":[{"type":"text","text":"Mock Claude: analyzing the task..."}]}}'
+echo '{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read","input":{"path":"src/index.ts"}}]}}'
+echo '{"type":"result","subtype":"success","result":"MOCK-CLAUDE: task complete. Summary: all done.","session_id":"sess-mock-1"}'
+exit 0

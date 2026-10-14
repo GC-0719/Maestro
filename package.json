@@ -1,0 +1,1 @@
+{"description":"Maestro — mission control for your fleet of AI coding agents","name":"maestro","private":true,"scripts":{"build":"npm run build --workspace=@maestro/core && npm run build --workspace=maestro-desktop","dev":"npm run dev --workspace=maestro-desktop","test":"npm run test --workspace=@maestro/core"},"version":"0.1.0","workspaces":["packages/*","apps/*"]}

@@ -1,0 +1,7 @@
+#!/bin/bash
+# Mock `codex` CLI: behaves like `codex exec --json`, exits 0.
+cat > /dev/null
+echo '{"type":"thread.started","thread_id":"t-mock-1"}'
+echo '{"type":"item.completed","item":{"type":"text","content":"Mock Codex: picked up the handed-over work."}}'
+echo '{"type":"turn.completed","item":{"type":"final","content":"MOCK-CODEX: handover received, task finished cleanly."}}'
+exit 0

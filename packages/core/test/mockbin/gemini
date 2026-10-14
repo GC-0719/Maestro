@@ -1,0 +1,6 @@
+#!/bin/bash
+# Mock `gemini` CLI: starts fine, then dies with a quota error on stderr.
+cat > /dev/null
+echo '{"type":"message","content":"Mock Gemini: starting research..."}'
+echo "ERROR: Quota exceeded for quota metric 'generativelanguage.googleapis.com/generate_content_free_tier_requests'" >&2
+exit 1
